@@ -1,25 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+// import LoginForm from './components/LoginForm';
+import MessagesPanel from './components/Messages-Panel';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+    state = { 
+        username: '',
+     }
+
+     updateUser = (user) => {
+         this.setState({username: user});
+     }
+
+    render() { 
+        // const { username } = this.state;
+            return (
+                <React.Fragment>
+    
+    
+    
+                    {/* <LoginForm updateParent={this.updateUser}/> */}
+                    <MessagesPanel user={'chris'}/>
+                </React.Fragment>
+    
+             );
+
+            
+
+        }
+        
+
+    
 }
-
+ 
 export default App;
+
